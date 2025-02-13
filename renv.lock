@@ -70,30 +70,6 @@
       ],
       "Hash": "20c33eb286df415db72c809ba314ac8e"
     },
-    "AnnotationHub": {
-      "Package": "AnnotationHub",
-      "Version": "3.14.0",
-      "Source": "Bioconductor",
-      "Repository": "Bioconductor 3.20",
-      "Requirements": [
-        "AnnotationDbi",
-        "BiocFileCache",
-        "BiocGenerics",
-        "BiocManager",
-        "BiocVersion",
-        "RSQLite",
-        "S4Vectors",
-        "curl",
-        "dplyr",
-        "grDevices",
-        "httr",
-        "methods",
-        "rappdirs",
-        "utils",
-        "yaml"
-      ],
-      "Hash": "07a8b7f7a8a23998324a40eab02a44e7"
-    },
     "BH": {
       "Package": "BH",
       "Version": "1.84.0-0",
@@ -137,26 +113,6 @@
         "utils"
       ],
       "Hash": "f6e716bdfed8acfd2d4137be7d4fa8f9"
-    },
-    "BiocFileCache": {
-      "Package": "BiocFileCache",
-      "Version": "2.14.0",
-      "Source": "Bioconductor",
-      "Repository": "Bioconductor 3.20",
-      "Requirements": [
-        "DBI",
-        "R",
-        "RSQLite",
-        "curl",
-        "dbplyr",
-        "dplyr",
-        "filelock",
-        "httr",
-        "methods",
-        "stats",
-        "utils"
-      ],
-      "Hash": "41f12a5ef4f6ea211228b1f84a72bba3"
     },
     "BiocGenerics": {
       "Package": "BiocGenerics",
@@ -330,23 +286,6 @@
         "stats4"
       ],
       "Hash": "c4f42dda8d17648382f46b5d0e8a962a"
-    },
-    "ExperimentHub": {
-      "Package": "ExperimentHub",
-      "Version": "2.14.0",
-      "Source": "Bioconductor",
-      "Repository": "Bioconductor 3.20",
-      "Requirements": [
-        "AnnotationHub",
-        "BiocFileCache",
-        "BiocGenerics",
-        "BiocManager",
-        "S4Vectors",
-        "methods",
-        "rappdirs",
-        "utils"
-      ],
-      "Hash": "30a37fca92cf663bb4b2f4e2343fae5f"
     },
     "Formula": {
       "Package": "Formula",
@@ -1307,25 +1246,6 @@
       ],
       "Hash": "24754fce82729ff85317dd195b6646a8"
     },
-    "depmap": {
-      "Package": "depmap",
-      "Version": "1.20.0",
-      "Source": "Bioconductor",
-      "Repository": "Bioconductor 3.20",
-      "Requirements": [
-        "AnnotationHub",
-        "BiocFileCache",
-        "ExperimentHub",
-        "R",
-        "curl",
-        "dplyr",
-        "httr2",
-        "methods",
-        "tibble",
-        "utils"
-      ],
-      "Hash": "9594cc4d332fbcf686c781a90b135e4e"
-    },
     "dichromat": {
       "Package": "dichromat",
       "Version": "2.0-0.1",
@@ -1452,16 +1372,6 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "aa5e1cd11c2d15497494c5292d7ffcc8"
-    },
-    "filelock": {
-      "Package": "filelock",
-      "Version": "1.0.3",
-      "Source": "Repository",
-      "Repository": "P3M",
-      "Requirements": [
-        "R"
-      ],
-      "Hash": "192053c276525c8495ccfd523aa8f2d1"
     },
     "fontawesome": {
       "Package": "fontawesome",
@@ -1834,27 +1744,6 @@
         "openssl"
       ],
       "Hash": "ac107251d9d9fd72f0ca8049988f1d7f"
-    },
-    "httr2": {
-      "Package": "httr2",
-      "Version": "1.1.0",
-      "Source": "Repository",
-      "Repository": "P3M",
-      "Requirements": [
-        "R",
-        "R6",
-        "cli",
-        "curl",
-        "glue",
-        "lifecycle",
-        "magrittr",
-        "openssl",
-        "rappdirs",
-        "rlang",
-        "vctrs",
-        "withr"
-      ],
-      "Hash": "0f14199bbd820a9fca398f2df40994f1"
     },
     "hwriter": {
       "Package": "hwriter",
