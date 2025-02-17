@@ -27,7 +27,7 @@ guide_map <- read_csv(here("data/AvanaGuideMap.csv")) |>
   distinct()
 
 
-avana_counts <- fread(here("data/AvanaLogfoldChange.csv"), fill = TRUE) 
+avana_counts <- fread(here("data/AvanaRawReadcounts.csv"), fill = TRUE) 
 
 rename_map <- setNames(models[["ModelID"]], models[["SequenceID"]])
 common_cols <- intersect(names(avana_counts), names(rename_map))
@@ -41,10 +41,7 @@ avana_counts |>
 left_join(guide_map, by = c("guide" = "sgRNA")) |>
 relocate(Gene, .after = guide) |>
 as_tibble() |> 
-write_tsv("results/avana_lfc_rename.tsv")
+write_tsv("results/avana_counts_rename.tsv")
     
 
-
-# Load Avana
-data(AVANA_Library)
 
