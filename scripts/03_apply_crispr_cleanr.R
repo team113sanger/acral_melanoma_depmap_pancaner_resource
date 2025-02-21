@@ -1,9 +1,22 @@
+
+################################################################################
+# Setup
+################################################################################
+
 library(tidyverse)
 library(CRISPRcleanR)
 data(AVANA_Library)
 library(furrr)
 library(glue)
 
+
+################################################################################
+# Read in the data
+################################################################################
+
+
+# 1. Read in the data and join with the AVANA library so that is is annotated 
+# for CRISPRcleanR.
 dataset <- read_tsv("results/avana_counts_rename.tsv") |>
   dplyr::rename("gene" = "Gene") |>
   left_join(AVANA_Library |>
@@ -15,6 +28,7 @@ dataset <- read_tsv("results/avana_counts_rename.tsv") |>
   relocate(contains("pDNA_batch_Avana"), .after = gene)
 
 
+# Divide the dataset into separate screens based on the pDNA batch.
 sample_names <- names(dataset)[-c(1, 2, 3, 4, 5)]
 sample_batches <- str_extract(sample_names, "Avana-\\d+")
 pdna_map <- paste0("pDNA_batch_", str_replace(sample_batches, "-", "_"))
@@ -39,10 +53,19 @@ split_cell_lines <- function(avana_dataset, ref) {
 }
 
 
+# 2. Determine the grouping prefix for each sample column.
+
+
 avana_v2 <- split_cell_lines(avana_datasets[[1]], dataset[, c(1, 2, 5)])
 avana_v3 <- split_cell_lines(avana_datasets[[2]], dataset[, c(1, 2, 4)])
 avana_v4 <- split_cell_lines(avana_datasets[[3]], dataset[, c(1, 2, 3)])
 
+
+################################################################################
+# CRISPRcleanR correction
+################################################################################
+
+# Paralellise work 
 plan(multisession, workers = 4)
 
 dataset <- avana_v4
@@ -94,6 +117,10 @@ imap(corrected_counts, ~ ccr.PlainTsvFile(.x,
   fprefix = .y,
   path = glue("./results/{dest}")
 ))
+################################################################################
+# Apply to Avana 3 samples 
+###############################################################################
+
 
 dataset_3 <- avana_v3
 # calculate_cell_line <- function(dataset, dest){
@@ -139,9 +166,9 @@ imap(corrected_counts_3, ~ ccr.PlainTsvFile(.x,
 ))
 
 
-
-
-
+################################################################################
+# Apply to Avana 2 samples 
+###############################################################################
 
 dataset_2 <- avana_v2
 # calculate_cell_line <- function(dataset, dest){
