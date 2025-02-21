@@ -5,8 +5,6 @@
 library(here)
 library(tidyverse)
 library(glue)
-# renv::install("francescojm/CRISPRcleanR")
-library(CRISPRcleanR)
 library(data.table)
 
 ################################################################################

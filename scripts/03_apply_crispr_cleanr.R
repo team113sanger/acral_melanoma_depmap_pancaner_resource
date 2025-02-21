@@ -56,9 +56,12 @@ split_cell_lines <- function(avana_dataset, ref) {
 # 2. Determine the grouping prefix for each sample column.
 
 
-avana_v2 <- split_cell_lines(avana_datasets[[1]], dataset[, c(1, 2, 5)])
-avana_v3 <- split_cell_lines(avana_datasets[[2]], dataset[, c(1, 2, 4)])
-avana_v4 <- split_cell_lines(avana_datasets[[3]], dataset[, c(1, 2, 3)])
+avana_v2 <- split_cell_lines(avana_datasets[[1]], 
+                             dataset[, c(1, 2, 5)])
+avana_v3 <- split_cell_lines(avana_datasets[[2]], 
+                             dataset[, c(1, 2, 4)])
+avana_v4 <- split_cell_lines(avana_datasets[[3]], 
+                             dataset[, c(1, 2, 3)])
 
 
 ################################################################################
