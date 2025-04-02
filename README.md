@@ -7,9 +7,11 @@ This repository contains a workflow used to generate BAGEL essentiality scrores 
 Running the scripts in this repository should retrieve and process the data from end-to-end.
 
 ## Dependencies
+
 - R (4.4.0) - libraries recorded in `renv.lock` file
 - Nextflow (>23.10.0)
 - Singularity (3.14)
+- BAGEL2 (commit #f9eedca)
 
 All R scripts were run on a Ubuntu 22.04.3 LTS system with R 4.4.0 installed via [rig](https://github.com/r-lib/rig). The Nextflow pipeline was run on Wellcome Trust Sanger Institutes's high-performance computing (HPC) cluster running Ubuntu 20.04 (Focal Fossa) with Singularity 3.14 installed and was configured to use the LSF scheduler. 
 
