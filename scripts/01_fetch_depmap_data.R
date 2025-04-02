@@ -21,7 +21,7 @@ curl::curl_download("https://figshare.com/ndownloader/files/51064568",
 curl::curl_download("https://figshare.com/ndownloader/files/51063578", 
                     destfile = here("data", "AvanaLogfoldChange.csv"))
 
-# Fetch the LogFoldChange file from figshare
+# Fetch the GuideMap file from figshare
 curl::curl_download("https://figshare.com/ndownloader/files/51063575", 
                     destfile = here("data", "AvanaGuideMap.csv"))
 
