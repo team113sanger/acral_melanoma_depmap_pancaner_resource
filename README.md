@@ -1,8 +1,9 @@
 # DEPMAP24Q4 BAGEL Analysis
 
 ## Summary
+This repository is a sub-analysis and is included with other analyses in the [Acral Melanoma PDX models from Latin America](https://github.com/team113sanger/Acral_Melanoma_PDX_models_from_Latin_America) parent repository.
 
-This repository contains a workflow used to generate BAGEL essentiality scrores for the latest version of DepMap (24Q4) to use in comparing essentiality scores from Pan-cancer samples with Acral melanomas. In brief, data from [DepMap](https://depmap.org/portal/) was downloaded, reformatted in R, and then corrected for copy number variation using [CRISPRcleanR](https://github.com/francescojm/CRISPRcleanR). The resulting copy-number corrected counts were then used as inputs for [BAGEL2](https://github.com/hart-lab/bagel). Finally, the BAGEL2 essentiality scores were aggregated to generate a matrix of essentiality scores for each cell line.
+It contains a workflow used to generate BAGEL essentiality scrores for the latest version of DepMap (24Q4) to use in comparing essentiality scores from Pan-cancer samples with Acral melanomas. In brief, data from [DepMap](https://depmap.org/portal/) was downloaded, reformatted in R, and then corrected for copy number variation using [CRISPRcleanR](https://github.com/francescojm/CRISPRcleanR). The resulting copy-number corrected counts were then used as inputs for [BAGEL2](https://github.com/hart-lab/bagel). Finally, the BAGEL2 essentiality scores were aggregated to generate a matrix of essentiality scores for each cell line.
 
 Running the scripts in this repository should retrieve and process the data from end-to-end.
 
